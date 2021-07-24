@@ -1,5 +1,5 @@
 {
-  "name": "demo-app",
+  "name": "ng-demoapp",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -15,9 +15,14 @@
     "@angular/compiler": "~12.1.1",
     "@angular/core": "~12.1.1",
     "@angular/forms": "~12.1.1",
+    "@angular/localize": "~12.1.1",
     "@angular/platform-browser": "~12.1.1",
     "@angular/platform-browser-dynamic": "~12.1.1",
     "@angular/router": "~12.1.1",
+    "@ng-bootstrap/ng-bootstrap": "^10.0.0",
+    "ag-grid-angular": "^25.3.0",
+    "ag-grid-community": "^25.3.0",
+    "bootstrap": "^5.0.2",
     "rxjs": "~6.6.0",
     "tslib": "^2.2.0",
     "zone.js": "~0.11.4"

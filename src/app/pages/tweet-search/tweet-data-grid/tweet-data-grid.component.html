@@ -1,0 +1,32 @@
+
+
+  
+<form class="tweet__form mt-2" [formGroup]="tweetSearchForm">
+    <div class="d-flex align-items-center">
+      <div class="w-25">
+        <input id="searchterm" class="form-control" type="text" aria-describedby="searchterm-invalid" maxlength="50"
+          [ngClass]="{ 'is-invalid': isControlInvalidated('searchterm') }" required
+          formControlName="searchterm" />
+        <div id="searchterm-invalid" class="invalid-feedback">Required</div>
+      </div>
+      <img src="assets/images/tooltip.svg" placement="bottom" theme="light" placement="right" ngbTooltip="Enter a search term up to 50 characters"
+        content-type="template" class="tweet__form-icon" />
+      
+    </div>
+    <br/>
+    <div>
+      <button class="btn--primary" [disabled]="processing" (click)="searchTweets()">Search</button>
+    </div>              
+    <br/>
+</form>
+
+<div class="row">
+  <ag-grid-angular
+      style="width: 950px; height: 500px;"
+      class="ag-theme-alpine"
+      [rowData]="rowData"
+      [columnDefs]="columnDefs">
+  </ag-grid-angular>
+</div>
+         
+

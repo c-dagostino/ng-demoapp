@@ -1,0 +1,37 @@
+<form class="stock__form mt-2" [formGroup]="stockSearchForm">
+    <div class="d-flex align-items-center">
+      <div class="w-25">
+        <input id="symbol" class="form-control" type="text" aria-describedby="symbol-invalid" maxlength="5"
+          [ngClass]="{ 'is-invalid': isControlInvalidated('symbol') }" required
+          formControlName="symbol" />
+        <div id="symbol-invalid" class="invalid-feedback">Required</div>
+      </div>
+      <img src="assets/images/tooltip.svg" placement="bottom" theme="light" placement="right" ngbTooltip="Enter a search term up to 50 characters"
+        content-type="template" class="stock__form-icon" />
+        <span style="padding-left: 10px;">
+            <button class="btn--primary" [disabled]="processing" (click)="getStock()">Get Stock</button>
+        </span>  
+    </div>
+    <br/>
+    <div id="resp-table-body">
+        <div class="resp-table-row">
+            <div class="table-body-cell">
+                Bid:
+                </div>
+                <div class="table-body-cell">
+                {{stockData.bid}}
+                </div>
+                <div class="table-body-cell">
+                Ask:
+                </div>
+                <div class="table-body-cell">
+                {{stockData.ask}}
+                </div>
+        </div>
+    </div>        
+    <br/>
+</form>
+
+<div class="row">
+<div class="cell"></div>
+</div>

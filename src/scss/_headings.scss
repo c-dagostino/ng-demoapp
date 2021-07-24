@@ -1,0 +1,26 @@
+h1, h2 {
+    color:  $primary-blue;
+}
+
+h3, h4, h5 {
+    color:  $dark-gray;
+}
+
+.page__title {
+    font-size: 52px;
+    line-height: 58px;
+}
+
+@include media-breakpoint-down(md) {
+    .page__title {
+        font-size: 32px;
+        line-height: 36px;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .page__title {
+        font-size: 24px;
+        line-height: 28px;
+    }
+}

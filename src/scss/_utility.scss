@@ -1,0 +1,28 @@
+.no-display {
+    display: none !important;
+}
+#ng-overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: #000;
+    background-color: rgba(0,0,0,.5);
+    z-index: 1000;
+    /*
+    opacity: .3;
+    filter: alpha(opacity=30);
+    */
+}
+.loading {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 48%;
+    left: 48%;
+    z-index: 1001;
+}
+a.reset-form {
+    cursor: pointer;
+}

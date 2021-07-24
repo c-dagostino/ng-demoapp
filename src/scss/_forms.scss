@@ -1,0 +1,25 @@
+$form-vert-padding: 42 / 16 + 0rem;
+$form-side-padding: 56 / 16 + 0rem;
+$form-bottom-margin: 60 / 16 + 0rem;
+
+form {
+    div.form-body {
+        padding-bottom: $form-vert-padding;
+        @include media-breakpoint-up(lg) {
+            background-color: $extra-light-gray;
+            padding-top: $form-vert-padding;
+            padding-right: $form-side-padding;
+            padding-left: $form-side-padding;
+            margin-bottom: $form-bottom-margin;
+        }
+    }
+}
+.radio__btn {
+    &-label {
+        padding-left: .5rem;
+    }
+}
+
+.resize-vertical {
+    resize: vertical;
+}

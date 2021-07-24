@@ -1,0 +1,160 @@
+.navbar-bg {
+  background: $white;
+  color: $primary-blue;
+  max-height: $header-height;
+  border-bottom: 3px solid $primary-blue;
+  padding-bottom: 0;
+  flex-flow: column;
+
+  &--has-nav {
+    max-height: $header-with-nav-height;
+  }
+
+  .topbar {
+    width: 100%;
+    height: $header-topbar-height;
+    color: $white;
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .container {
+    align-items: baseline;
+  }
+}
+
+.navbar-brand {
+  color: $primary-blue;
+
+  img {
+    height: 64px;
+  }
+}
+
+.nav {
+  display: flex;
+
+  &--lg {
+    display: flex;
+  }
+
+  &--md {
+    display: none;
+  }
+
+  &__item {
+    padding: 14px;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    letter-spacing: .02em;
+
+    &:not(:last-child) {
+      margin-right: 1px;
+    }
+
+    &.active {
+      color: $header-nav-active-color;
+      border-bottom: 3px solid $yellow;
+    }
+  }
+
+  &-right {
+    &__item {
+      padding: 0 .75rem;
+      color: $white;
+      font-size: 18px;
+      line-height: 20px;
+      font-weight: 600;
+      text-decoration: underline;
+      cursor: pointer;
+
+      &:not(:last-child) {
+        // border-right: 1px solid $primary-blue;
+        border-right: 1px solid $yellow;
+      }
+
+      &-icon {
+        width: 24px;
+        height: 24px;
+        margin-left: .25rem;
+        object-fit: contain;
+      }
+    }
+  }
+
+  a {
+    color: inherit;
+  }
+
+}
+
+@include media-breakpoint-down(md) {
+  .navbar-brand {
+    img {
+      height: 48px;
+    }
+  }
+
+    .nav {
+      &--lg {
+        display: none;
+      }
+      &--md {
+        display: flex;
+        width: 100%;
+        margin-top: .25rem;
+      }
+
+      &__item {
+        flex: 1;
+        width: 100%;
+        background: #D8D8D8;
+        color: $primary-blue;
+        font-size: 12px;
+        line-height: 16px;
+        text-align: center;
+        padding: 12px;
+
+        &.active {
+          border: none;
+          background: $primary-blue;
+          color: $white;
+        }
+      }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+  .navbar-bg {
+    .topbar {
+      h4 {
+        font-size: 12px;
+        line-height: 16px;
+      }
+    }
+    .navbar-brand {
+      img {
+        height: 25px;
+      }
+    }
+  }
+  .nav {
+    &-right {
+      &__item {
+        font-size: 12px;
+        line-height: 16px;
+
+        &-icon {
+          width: 16px;
+          height: 16px;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}

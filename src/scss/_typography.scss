@@ -1,0 +1,51 @@
+$para-text-size: $base-font-size;
+$para-line-height: 20 / 16 + 0rem;
+$para-bottom-margin: 1rem;
+
+$label-font-size: 12 / 16 + 0rem;
+$label-line-size: 1rem;
+
+p {
+    font-size: $para-text-size;
+    line-height: $para-line-height;
+    margin-bottom: $para-bottom-margin;
+}
+
+label {
+    font-size: $label-font-size;
+    line-height: $label-line-size;
+}
+
+ol, ul {
+    padding-left: 1.5rem;
+}
+
+li::marker {
+    color: $yellow-green;
+}
+
+.text--error {
+    color: $error-red;
+}
+
+/** Common Fonts Used **/
+@mixin font-gen($fs, $lh) {
+    font-size: $fs;
+    line-height: $lh;
+}
+.f-16 {
+    @include font-gen(16px, 24px);
+}
+.f-24 {
+    @include font-gen(24px, 28px);
+}
+.f-18 {
+    @include font-gen(18px, 20px);
+}
+.bold {
+    font-weight: bold;
+}
+
+.text-decoration-none {
+  text-decoration: none;
+}

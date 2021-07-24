@@ -1,0 +1,28 @@
+
+@import '~bootstrap/scss/bootstrap';
+@import './overrides';
+@import './variables';
+@import './utility.scss';
+@import './colors';
+@import './body';
+@import './typography';
+@import './headings';
+@import './input';
+@import './forms';
+@import './masthead';
+@import './buttons';
+@import "./tweet";
+@import "./stock";
+@import "./table";
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+@import "../../node_modules/ag-grid-community/src/styles/ag-grid.scss";
+@import "../../node_modules/ag-grid-community/src/styles/ag-theme-alpine/sass/ag-theme-alpine-mixin.scss";
+
+.ag-theme-alpine {
+    @include ag-theme-alpine();
+}
+
+.ag-cell {
+    line-height: 20px !important;
+}
